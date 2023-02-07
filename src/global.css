@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	/* theme */
+	.bg-primary {
+		@apply bg-purple-600 text-white;
+	}
+	.bg-secondary {
+		@apply bg-amber-400 text-white;
+	}
+	.bg-secondary-with-hover {
+		@apply bg-secondary hover:bg-amber-500 hover:text-slate-200 transition-all duration-300;
+	}
+	.text-primary {
+		@apply text-purple-600;
+	}
+	/* end of theme */
+	/* components */
+	/* -- navigation -- */
+	.navigation {
+		@apply bg-primary px-10 py-5 flex justify-between items-center;
+	}
+	.navigation-item-height {
+		@apply h-10;
+	}
+	.navigation-brand {
+		@apply w-10 navigation-item-height bg-contain bg-[url('https://pbs.twimg.com/profile_images/1195776739114283011/lznT2rZo_400x400.jpg')];
+	}
+	.navigation-search {
+		@apply h-full flex justify-center;
+	}
+	.navigation-search-input {
+		@apply navigation-item-height rounded-l-lg;
+	}
+	.navigation-search-button {
+		@apply bg-secondary-with-hover navigation-item-height px-5 rounded-r-lg;
+	}
+	.navigation-items-list {
+		@apply text-base md:text-lg flex justify-around items-center;
+	}
+	.navigation-item {
+		@apply font-bold mx-3;
+	}
+	.navigation-item-link {
+		@apply hover:text-slate-200 transition-all duration-300;
+	}
+	.navigation-item-selected {
+		@apply text-slate-200;
+	}
+	/* -- end of navigation -- */
+	/* -- section -- */
+	.section {
+		@apply bg-white text-primary p-7 mb-5 rounded-lg shadow-sm;
+	}
+	.section-header {
+		@apply pb-2 flex justify-between border-b-2 border-slate-100;
+	}
+	.section-title {
+		@apply font-bold;
+	}
+	/* -- end of section */
+	/* -- footer -- */
+	.footer {
+		@apply bg-primary flex justify-center items-center py-5;
+	}
+	/* -- end of footer -- */
+	.content {
+		@apply bg-white min-h-screen;
+	}
+	.main {
+		@apply px-10 py-5 bg-gray-50;
+	}
+	/* end of components */
+}
